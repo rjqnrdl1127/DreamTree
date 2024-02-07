@@ -1,18 +1,27 @@
 package com.example.dreamtree.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/")
 public class IndexController {
 
-    @GetMapping("/hello")
-    public ModelAndView index() {
-        ModelAndView view = new ModelAndView();
-        view.addObject("hello", "Hello World!");
-        view.setViewName("index");
+    @GetMapping("/index")
+    public String index(Model model) {
+        model.addAttribute("hello", "Hello World!");
+        return "index";
+    }
 
-        return view;
+    @GetMapping("/sign_in")
+    public String signIn() {
+        return "sign_in";
+    }
+
+    @GetMapping("/sign_up")
+    public String signUp() {
+        return "sign_up";
     }
 }

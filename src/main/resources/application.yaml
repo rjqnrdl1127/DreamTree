@@ -15,5 +15,16 @@ spring:
     url: jdbc:mysql://52.73.138.41:3306/dream_tree
   mvc:
     view:
-      prefix: /WEB-INF/views/
+      prefix: /
       suffix: .jsp
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: false
+        default_batch_fetch_size: 1000
+  devtools:
+    livereload:
+      enabled: true
