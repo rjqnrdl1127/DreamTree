@@ -9,5 +9,4 @@ public class DreamTreeApplication {
     public static void main(String[] args) {
         SpringApplication.run(DreamTreeApplication.class, args);
     }
-
 }

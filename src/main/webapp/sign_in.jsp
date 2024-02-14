@@ -1,26 +1,22 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: iseongmin
-  Date: 1/26/24
-  Time: 5:31 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          isELIgnored="false" pageEncoding="UTF-8" %>
-<!doctype html>
 <html lang="en">
 <head>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/sign_style.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sign In</title>
 </head>
 <body>
 <div class="container" id="container">
+    <jsp:include page="modal_id.jsp"/>
+    <jsp:include page="modal_nickname.jsp"/>
     <div class="form-container sign-up">
-        <form>
+
+        <div class="form">
             <h1>Create Account</h1>
             <div class="social-icons">
                 <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
@@ -29,14 +25,31 @@
                 <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
             <span>or use your email for registration</span>
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password">
+            <div class="input">
+                <div>
+                    <input type="text" placeholder="아이디">
+                </div>
+                <div>
+                    <button id="btn-check-id">확인</button>
+                </div>
+            </div>
+            <input type="password" placeholder="비밀번호">
+            <input type="password" placeholder="비밀번호 확인">
+            <input type="text" placeholder="이름">
+            <div class="input">
+                <div>
+                    <input type="text" placeholder="닉네임">
+                </div>
+                <div>
+                    <button id="btn-check-nick">확인</button>
+                </div>
+            </div>
+            <input type="text" placeholder="전화번호">
             <button>Sign Up</button>
-        </form>
+        </div>
     </div>
     <div class="form-container sign-in">
-        <form>
+        <div class="form">
             <h1>Sign In</h1>
             <div class="social-icons">
                 <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
@@ -45,11 +58,11 @@
                 <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
             <span>or use your email password</span>
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password">
+            <input type="email" placeholder="아아디">
+            <input type="password" placeholder="비밀번호">
             <a href="#">Forget Your Password?</a>
             <button>Sign In</button>
-        </form>
+        </div>
     </div>
     <div class="toggle-container">
         <div class="toggle">
@@ -64,8 +77,12 @@
                 <button class="hidden" id="register">Sign Up</button>
             </div>
         </div>
+
     </div>
 </div>
-<script src="./js/style.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="./js/sign_style.js"></script>
+<script type="text/javascript" src="./js/modal.js"></script>
 </body>
 </html>

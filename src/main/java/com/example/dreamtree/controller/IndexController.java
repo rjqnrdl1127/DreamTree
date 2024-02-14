@@ -19,9 +19,4 @@ public class IndexController {
     public String signIn() {
         return "sign_in";
     }
-
-    @GetMapping("/sign_up")
-    public String signUp() {
-        return "sign_up";
-    }
 }
