@@ -12,7 +12,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: Vlfkalem1@
-    url: jdbc:mysql://52.73.138.41:3306/dream_tree
+    url: jdbc:mysql://13.209.57.129:3306/dream_tree
   mvc:
     view:
       prefix: /

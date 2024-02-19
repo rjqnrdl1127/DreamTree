@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 
@@ -14,15 +15,21 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 @Entity
-public class Member {
+public class Community {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String userId;
-    private String userPassword;
-    private String userName;
+    private Long num1;
     private String userNick;
-    private String userMobile;
+    private String title;
+    private String content;
+
     @CreationTimestamp
     private LocalDateTime createdAt;
+
+    @UpdateTimestamp
+    private LocalDateTime updatedAt;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Member member;
 }

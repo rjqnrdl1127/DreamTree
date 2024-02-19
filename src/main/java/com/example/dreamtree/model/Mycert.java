@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
@@ -14,15 +13,18 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 @Entity
-public class Member {
+public class Mycert {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String userId;
-    private String userPassword;
-    private String userName;
-    private String userNick;
-    private String userMobile;
-    @CreationTimestamp
-    private LocalDateTime createdAt;
+    private Long licenseNum;
+    private Integer licenseGrade;
+    private String licenseAfterDescription;
+    private Character licensePassYn;
+    private LocalDateTime testDt;
+
+    @ManyToOne
+    private Member member;
+    @OneToOne
+    private Certification certification;
 }

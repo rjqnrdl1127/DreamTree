@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #B6B3C3, #857FA0, #564C7E, #201939, #130E28);
+    height: 100vh;
+}
+
+.cont {
+    background-color: rgb(0, 0, 0, 0.17);
+    padding: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.2rem;
+}
+
+.header-nav {
+
+}
+
+.header-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.login_nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 15px;
+    text-align: center;
+}
+
+.sign-up {
+    width: 100px;
+    border-radius: 30px;
+    background: #383253;
+    text-align: center;
+    border-style: solid;
+}
+
+.banner {
+    background: linear-gradient(to top, #0C070D 0.04%, rgba(173, 76, 181, 0.534592) 11.4%, rgba(125, 62, 207, 0.48661) 20.02%, rgba(20, 2, 228, 0.250762) 42.65%, rgba(28, 24, 33, 0.79) 90.1%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: revert;
+}
+
+#banner-png {
+    width: 15rem;
+    height: 20rem;
+    border-radius: 79.5rem;
+    margin-right: 5rem;
+}
+
+.banner-word {
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    margin-left: 5rem;
+    margin-top: 4rem;
+}

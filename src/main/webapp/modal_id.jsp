@@ -15,8 +15,8 @@
         </div>
         <div class="modal-content">
             <p>아이디는 영문(소문자), 숫자로 4~16자 이내로 입력해 주세요</p>
-            <input type="text" name="check_id" required>
-            <button id="check-id">확인</button>
+            <input type="text" id="modal-check-id" required>
+            <button id="modal-btn-check-id">확인</button>
         </div>
     </div>
 </div>

@@ -10,9 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class IndexController {
 
     @GetMapping("/index")
-    public String index(Model model) {
-        model.addAttribute("hello", "Hello World!");
-        return "index";
+    public String index() {
+        return "index.html";
     }
 
     @GetMapping("/sign_in")

@@ -27,7 +27,7 @@
             <span>or use your email for registration</span>
             <div class="input">
                 <div>
-                    <input type="text" placeholder="아이디">
+                    <input type="text" name="check_id" placeholder="아이디">
                 </div>
                 <div>
                     <button id="btn-check-id">확인</button>
@@ -38,7 +38,7 @@
             <input type="text" placeholder="이름">
             <div class="input">
                 <div>
-                    <input type="text" placeholder="닉네임">
+                    <input type="text" name="check_nick" placeholder="닉네임">
                 </div>
                 <div>
                     <button id="btn-check-nick">확인</button>
@@ -54,11 +54,11 @@
             <div class="social-icons">
                 <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
                 <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                <a href="https://github.com/rjqnrdl1127/DreamTree" class="icon"><i class="fa-brands fa-github"></i></a>
                 <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
             <span>or use your email password</span>
-            <input type="email" placeholder="아아디">
+            <input type="text" name="username" placeholder="아아디">
             <input type="password" placeholder="비밀번호">
             <a href="#">Forget Your Password?</a>
             <button>Sign In</button>
@@ -84,5 +84,6 @@
         crossorigin="anonymous"></script>
 <script type="text/javascript" src="./js/sign_style.js"></script>
 <script type="text/javascript" src="./js/modal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>

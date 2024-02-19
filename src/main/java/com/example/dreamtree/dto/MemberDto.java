@@ -1,36 +1,30 @@
 package com.example.dreamtree.dto;
 
 import com.example.dreamtree.model.Member;
-import lombok.*;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
-
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class MemberDto {
 
-    private Long id;
-    private String username;
-    private String password;
-    private String name;
-    private String nickName;
-    private String email;
-    private String phoneNumber;
-    private LocalDateTime createDate;
-    private LocalDateTime updateDate;
+    private String userId;
+    private String userPassword;
+    private String userName;
+    private String userNick;
+    private String userMobile;
 
-    public static MemberDto fromEmpty(Member member) {
+    public static MemberDto fromEntity(Member member) {
         return MemberDto.builder()
-                .username(member.getUsername())
-                .password(member.getPassword())
-                .name(member.getName())
-                .nickName(member.getNickName())
-                .phoneNumber(member.getPhoneNumber())
+                .userId(member.getUserId())
+                .userPassword(member.getUserPassword())
+                .userName(member.getUserName())
+                .userNick(member.getUserNick())
+                .userMobile(member.getUserMobile())
                 .build();
     }
 }
