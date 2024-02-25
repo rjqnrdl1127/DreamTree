@@ -28,3 +28,4 @@ btn_check_nick.addEventListener('click', () => {
     modal_nick.style.display = 'flex';
     modal_nick.style.zIndex = '2000';
 })
+

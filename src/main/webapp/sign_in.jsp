@@ -15,7 +15,6 @@
     <jsp:include page="modal_id.jsp"/>
     <jsp:include page="modal_nickname.jsp"/>
     <div class="form-container sign-up">
-
         <div class="form">
             <h1>Create Account</h1>
             <div class="social-icons">
@@ -25,27 +24,29 @@
                 <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
             <span>or use your email for registration</span>
-            <div class="input">
-                <div>
-                    <input type="text" name="check_id" placeholder="아이디">
+            <div>
+                <div class="input">
+                    <div>
+                        <input type="text" name="user_id" placeholder="아이디">
+                    </div>
+                    <div>
+                        <button id="btn-check-id">확인</button>
+                    </div>
                 </div>
-                <div>
-                    <button id="btn-check-id">확인</button>
+                <input type="password" name="user_password" placeholder="비밀번호">
+                <input type="password" name="user_password2" placeholder="비밀번호 확인">
+                <input type="text" name="user_name" placeholder="이름">
+                <div class="input">
+                    <div>
+                        <input type="text" name="user_nick" placeholder="닉네임">
+                    </div>
+                    <div>
+                        <button id="btn-check-nick">확인</button>
+                    </div>
                 </div>
+                <input type="text" placeholder="전화번호">
+                <button id="btn_sign_up">Sign Up</button>
             </div>
-            <input type="password" placeholder="비밀번호">
-            <input type="password" placeholder="비밀번호 확인">
-            <input type="text" placeholder="이름">
-            <div class="input">
-                <div>
-                    <input type="text" name="check_nick" placeholder="닉네임">
-                </div>
-                <div>
-                    <button id="btn-check-nick">확인</button>
-                </div>
-            </div>
-            <input type="text" placeholder="전화번호">
-            <button>Sign Up</button>
         </div>
     </div>
     <div class="form-container sign-in">
@@ -61,7 +62,7 @@
             <input type="text" name="username" placeholder="아아디">
             <input type="password" placeholder="비밀번호">
             <a href="#">Forget Your Password?</a>
-            <button>Sign In</button>
+            <button id="btn_sign_in">Sign In</button>
         </div>
     </div>
     <div class="toggle-container">
@@ -83,7 +84,7 @@
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
         crossorigin="anonymous"></script>
 <script type="text/javascript" src="./js/sign_style.js"></script>
-<script type="text/javascript" src="./js/modal.js"></script>
+<script type="text/javascript" src="js/modal_style.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>

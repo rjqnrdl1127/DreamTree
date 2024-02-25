@@ -8,8 +8,7 @@
 }
 
 body {
-    background-color: #c9d6ff;
-    background: linear-gradient(to right, #B6B3C3, #857FA0, #564C7E, #201939, #130E28);
+    background: linear-gradient(to right, #E2E2E2 -12.77%, #E2E2E2 -12.76%, #B6B3C3 -1.52%, #857FA0 9.67%, #564C7E 28.95%, #201939 72.69%, #130E28 101.92%);
     height: 100vh;
 }
 

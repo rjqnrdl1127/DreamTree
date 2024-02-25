@@ -25,4 +25,5 @@ public class Member {
     private String userMobile;
     @CreationTimestamp
     private LocalDateTime createdAt;
+
 }

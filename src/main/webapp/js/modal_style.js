@@ -30,5 +30,4 @@ button_check_nick.addEventListener('click', () => {
             alert("사용중인 닉네임입니다.");
         });
     modal_nick.style.display = 'none';
-});
-
+})
