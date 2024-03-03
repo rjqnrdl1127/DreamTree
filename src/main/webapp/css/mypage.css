@@ -1,0 +1,295 @@
+@charset "UTF-8";
+@import url(reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url(all.min.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background-color: #c9d6ff;
+  background: linear-gradient(
+    to right,
+    #b6b3c3,
+    #857fa0,
+    #564c7e,
+    #201939,
+    #130e28
+  );
+  height: 100vh;
+}
+
+/*콘텐츠 사이즈 1200*/
+[class$="inner"] {
+  width: 1200px;
+  height: 100%;
+  margin: auto;
+}
+
+#header {
+  position: relative;
+  z-index: 1;
+  height: 50px;
+  line-height: 50px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+  transition: all 0.5s;
+  overflow: hidden;
+}
+
+/*header*/
+.cont {
+  background-color: rgb(0, 0, 0, 0.17);
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.2rem;
+}
+
+.header-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.login_nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 15px;
+  text-align: center;
+}
+
+.sign-up {
+  width: 100px;
+  border-radius: 30px;
+  background: #383253;
+  text-align: center;
+  border-style: solid;
+}
+
+/*본문 - 섹션 공통 스타일*/
+#main [class$="inner"] {
+  color: #222;
+}
+#main h2 {
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+#main h2:before {
+  content: "recent ";
+  color: #059;
+  font-size: 70%;
+  margin-right: 10px;
+}
+#main h2 + p {
+  text-align: center;
+  font-size: large;
+  line-height: 1.6;
+}
+#main .list {
+  margin-top: 50px;
+}
+
+/* button */
+.bu {
+  margin: 30px 0px 0px 0px;
+}
+
+/*work*/
+#work .work-inner {
+  width: 800px;
+  height: 120px;
+  margin: auto;
+}
+#work .profile-box1 {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+}
+#work .profile-box1 .photo {
+  width: 120px;
+  height: 120px;
+  margin-right: 20px;
+  margin-left: 40px;
+}
+#work .profile-box1 .photo img {
+  width: 120px;
+  height: 120px;
+}
+#work .profile-box1 .right {
+  color: #ffff;
+}
+
+/*본문 스킬*/
+#skill .skill-inner {
+  width: 800px;
+  height: 100%;
+  margin: auto;
+}
+#skill .list {
+  text-align: center;
+}
+#skill .list li {
+  float: left;
+  width: 300px;
+  height: 70px;
+  margin-right: 50px;
+  /* Rectangle 101 */
+  margin-bottom: 50px;
+  /* position: absolute;
+width: 398px;
+height: 78px;
+left: 1069px;
+top: 296px; */
+
+  background: linear-gradient(
+    180deg,
+    #ebf29d 0.57%,
+    rgba(128, 84, 255, 0.674791) 65.83%,
+    rgba(132, 89, 255, 0.654789) 92.7%,
+    rgba(113, 111, 134, 0) 109.67%
+  );
+  filter: drop-shadow(10px 8px 30px rgba(0, 0, 0, 0.25));
+  border-radius: 70px;
+}
+
+.pass {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+}
+.textbox {
+  font-size: 19px;
+  color: #fff;
+  margin: 23px 3px 0px 12px;
+  background-color: none;
+}
+#skill h3 {
+  padding-top: 25px;
+  font-size: 20px;
+  color: #ffff;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/*1 2 3 리스트만 선택해서 여백 주기!!*/
+#skill .list li:nth-child(n-2) {
+  margin-right: 80px;
+}
+
+#skill .list li:last-child {
+  margin-left: 380px;
+  margin-bottom: 0;
+}
+#skill p {
+  margin-left: 470px;
+}
+
+/* modal- 팝업창 */
+#modalWrap {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  display: none;
+}
+
+#modalBody {
+  width: 400px;
+  height: 400px;
+  padding: 30px 50px;
+  margin: 0 auto;
+  border: 1px solid #777;
+  background-color: #fff;
+  background: #d7d9fd;
+  border-radius: 25px;
+}
+.title {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    #a9f29d 0.54%,
+    rgba(117, 105, 152, 0.674791) 62.6%,
+    rgba(224, 156, 225, 0.654789) 88.16%,
+    rgba(41, 23, 250, 0) 104.3%
+  );
+  color: #fff;
+  border-radius: 30px;
+  margin: 40px 0 40px 0;
+}
+.title p {
+  padding-top: 5px;
+}
+#closeBtn {
+  float: right;
+  font-weight: bold;
+  color: #777;
+  font-size: 25px;
+  cursor: pointer;
+}
+#modalBody form {
+  padding-bottom: 20px;
+}
+#modalBody .but {
+  margin-left: 155px;
+}
+/* model2-변경완료 */
+#modalWrap2 {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 300px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  display: none;
+}
+
+#modalBody2 {
+  width: 400px;
+  height: 100px;
+  padding: 10px 50px;
+  margin: 0 auto;
+  border: 1px solid #777;
+  background-color: #fff;
+  background: #d7d9fd;
+  border-radius: 25px;
+}
+.title2 {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  color: #777;
+  border-radius: 30px;
+  padding-top: 30px;
+  font-size: 20px;
+}
+
+#closeBtn3 {
+  float: right;
+  font-weight: bold;
+  color: #777;
+  font-size: 25px;
+  cursor: pointer;
+  padding-bottom: 30px;
+}
+
+/*작업용-삭제!!!*/

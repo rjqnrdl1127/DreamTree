@@ -24,7 +24,6 @@ button_check_nick.addEventListener('click', () => {
             if (response.data !== 0) {
                 alert("사용 가능한 닉네임입니다")
             }
-
         })
         .catch((error) => {
             alert("사용중인 닉네임입니다.");
