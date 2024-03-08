@@ -14,57 +14,61 @@
 <div class="container" id="container">
     <jsp:include page="modal_id.jsp"/>
     <jsp:include page="modal_nickname.jsp"/>
-    <div class="form-container sign-up">
-        <div class="form">
-            <h1>Create Account</h1>
-            <div class="social-icons">
-                <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-            </div>
-            <span>or use your email for registration</span>
-            <div>
-                <div class="input">
-                    <div>
-                        <input type="text" name="user_id" placeholder="아이디">
-                    </div>
-                    <div>
-                        <button id="btn-check-id">확인</button>
-                    </div>
+    <form action="">
+        <div class="form-container sign-up">
+            <div class="form">
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
-                <input type="password" name="user_password" placeholder="비밀번호">
-                <input type="password" name="user_password2" placeholder="비밀번호 확인">
-                <input type="text" name="user_name" placeholder="이름">
-                <div class="input">
-                    <div>
-                        <input type="text" name="user_nick" placeholder="닉네임">
+                <span>or use your email for registration</span>
+                <div>
+                    <div class="input">
+                        <div>
+                            <input type="text" name="user_id" placeholder="아이디">
+                        </div>
+                        <div>
+                            <button id="btn-check-id">확인</button>
+                        </div>
                     </div>
-                    <div>
-                        <button id="btn-check-nick">확인</button>
+                    <input type="password" name="user_password" placeholder="비밀번호">
+                    <input type="password" name="user_password2" placeholder="비밀번호 확인">
+                    <input type="text" name="user_name" placeholder="이름">
+                    <div class="input">
+                        <div>
+                            <input type="text" name="user_nick" placeholder="닉네임">
+                        </div>
+                        <div>
+                            <button id="btn-check-nick">확인</button>
+                        </div>
                     </div>
+                    <input type="text" placeholder="전화번호">
+                    <button id="btn_sign_up">Sign Up</button>
                 </div>
-                <input type="text" placeholder="전화번호">
-                <button id="btn_sign_up">Sign Up</button>
             </div>
         </div>
-    </div>
-    <div class="form-container sign-in">
-        <div class="form">
-            <h1>Sign In</h1>
-            <div class="social-icons">
-                <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://github.com/rjqnrdl1127/DreamTree" class="icon"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+    </form>
+    <form action="">
+        <div class="form-container sign-in">
+            <div class="form">
+                <h1>Sign In</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://github.com/rjqnrdl1127/DreamTree" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email password</span>
+                <input type="text" name="username" placeholder="아아디">
+                <input type="password" placeholder="비밀번호">
+                <a href="#">Forget Your Password?</a>
+                <button id="btn_sign_in">Sign In</button>
             </div>
-            <span>or use your email password</span>
-            <input type="text" name="username" placeholder="아아디">
-            <input type="password" placeholder="비밀번호">
-            <a href="#">Forget Your Password?</a>
-            <button id="btn_sign_in">Sign In</button>
         </div>
-    </div>
+    </form>
     <div class="toggle-container">
         <div class="toggle">
             <div class="toggle-panel toggle-left">
