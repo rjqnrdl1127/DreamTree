@@ -15,7 +15,7 @@ public class MySite {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long siteNum;
+    private Long id;
     private String siteName;
     private String siteUrl;
 

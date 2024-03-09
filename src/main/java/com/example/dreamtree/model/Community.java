@@ -19,8 +19,8 @@ public class Community {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long num1;
-    private String userNick;
+    private Long id;
+    private String name;
     private String title;
     private String content;
 

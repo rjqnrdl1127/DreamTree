@@ -14,7 +14,7 @@
 <div class="container" id="container">
     <jsp:include page="modal_id.jsp"/>
     <jsp:include page="modal_nickname.jsp"/>
-    <form action="">
+    <form method="post" action="/member/signup">
         <div class="form-container sign-up">
             <div class="form">
                 <h1>Create Account</h1>
@@ -28,30 +28,30 @@
                 <div>
                     <div class="input">
                         <div>
-                            <input type="text" name="user_id" placeholder="아이디">
+                            <input type="text" name="userId" placeholder="아이디">
                         </div>
                         <div>
                             <button id="btn-check-id">확인</button>
                         </div>
                     </div>
-                    <input type="password" name="user_password" placeholder="비밀번호">
+                    <input type="password" name="userPassword" placeholder="비밀번호">
                     <input type="password" name="user_password2" placeholder="비밀번호 확인">
-                    <input type="text" name="user_name" placeholder="이름">
+                    <input type="text" name="userName" placeholder="이름">
                     <div class="input">
                         <div>
-                            <input type="text" name="user_nick" placeholder="닉네임">
+                            <input type="text" name="userNick" placeholder="닉네임">
                         </div>
                         <div>
                             <button id="btn-check-nick">확인</button>
                         </div>
                     </div>
-                    <input type="text" placeholder="전화번호">
+                    <input type="text" name="userMobile" placeholder="전화번호">
                     <button id="btn_sign_up">Sign Up</button>
                 </div>
             </div>
         </div>
     </form>
-    <form action="">
+    <form method="post" action="/member/signIn">
         <div class="form-container sign-in">
             <div class="form">
                 <h1>Sign In</h1>

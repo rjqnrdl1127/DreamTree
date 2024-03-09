@@ -17,16 +17,11 @@ public class Certification {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "license_mngt_num")
-    private Long licenseMngtNum;
-    @Column(name = "license_yy")
-    private int licenseYy;
-    @Column(name = "license_nm")
-    private String licenseNm;
-    @Column(name = "license_type")
-    private String licenseType;
-    @Column(name = "license_count")
-    private Long licenseCount;
+    private Long id;
+    private Long year;
+    private String name;
+    private String type;
+    private Long count;
     @Column(name = "receipt_start_dt")
     private Date receiptStartDt;
     @Column(name = "receipt_end_dt")
@@ -35,8 +30,6 @@ public class Certification {
     private Date examStartDt;
     @Column(name = "exam_end_dt")
     private Date examEndDt;
-    @Column(name = "license_description")
-    private String licenseDescription;
-    @Column(name = "license_read_hit")
-    private String licenseReadHit;
+    private String description;
+    private Long readHit;
 }

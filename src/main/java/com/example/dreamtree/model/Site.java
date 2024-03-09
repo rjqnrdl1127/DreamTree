@@ -14,11 +14,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Entity
-public class StudySite {
+public class Site {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long studySiteNum;
-    private String studySiteName;
-    private String studySiteUrl;
+    private Long id;
+    private String name;
+    private String url;
 }

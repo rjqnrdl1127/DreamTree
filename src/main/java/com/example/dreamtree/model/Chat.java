@@ -15,7 +15,7 @@ public class Chat {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long chatNum;
+    private Long id;
     private String chatRoot;
     private String chatDescription;
 

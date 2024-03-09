@@ -13,15 +13,15 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 @Entity
-public class Mycert {
+public class MyCert {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long licenseNum;
-    private Integer licenseGrade;
-    private String licenseAfterDescription;
-    private Character licensePassYn;
-    private LocalDateTime testDt;
+    private Long id;
+    private LocalDateTime testDate;
+    private Integer grade;
+    private Character pass;
+    private String afterDescription;
 
     @ManyToOne
     private Member member;

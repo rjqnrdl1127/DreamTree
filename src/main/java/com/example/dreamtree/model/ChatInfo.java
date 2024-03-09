@@ -15,18 +15,16 @@ import java.util.List;
 @Entity
 public class ChatInfo {
 
-    @Column(name = "chat_content")
-    private String chatContent;
-
-    @ManyToOne
-    @JoinColumn(name = "chat_num")
-    private Chat chat;
-
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private Member member;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    private String chatContent;
+
+    @ManyToOne
+    private Chat chat;
+
+    @ManyToOne
+    private Member member;
+
 }

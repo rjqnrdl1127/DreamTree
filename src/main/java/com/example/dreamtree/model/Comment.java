@@ -17,7 +17,7 @@ public class Comment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long num2;
+    private Long id;
     private String comment;
     private LocalDateTime createdAt;
 

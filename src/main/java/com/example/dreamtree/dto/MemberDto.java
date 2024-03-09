@@ -18,8 +18,8 @@ public class MemberDto {
     private String userNick;
     private String userMobile;
 
-    public static MemberDto fromEntity(Member member) {
-        return MemberDto.builder()
+    public static Member fromEntity(Member member) {
+        return Member.builder()
                 .userId(member.getUserId())
                 .userPassword(member.getUserPassword())
                 .userName(member.getUserName())
