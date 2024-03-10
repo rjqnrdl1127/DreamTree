@@ -22,14 +22,10 @@ public class Certification {
     private String name;
     private String type;
     private Long count;
-    @Column(name = "receipt_start_dt")
-    private Date receiptStartDt;
-    @Column(name = "receipt_end_dt")
-    private Date receiptEndDt;
-    @Column(name = "exam_start_dt")
-    private Date examStartDt;
-    @Column(name = "exam_end_dt")
-    private Date examEndDt;
+    private Date receiptStartDate;
+    private Date receiptEndDate;
+    private Date examStartDate;
+    private Date examEndDate;
     private String description;
     private Long readHit;
 }

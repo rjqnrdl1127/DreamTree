@@ -7,9 +7,8 @@ import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Optional;
 
 @Controller
 @Slf4j
@@ -24,9 +23,9 @@ public class MemberController {
      * @param memberDto
      */
     @PostMapping("/signIn")
-    public String signIn(HttpSession session, MemberDto memberDto) {
+    public String signIn(MemberDto memberDto, HttpSession session) {
         session.setMaxInactiveInterval(-1);
-        Optional<Member> member = memberService.selectMember(memberDto.getUserId());
+        Member member = memberService.selectMemberById(memberDto.getUserId());
         session.setAttribute("member", member);
 
         return "index";
@@ -39,7 +38,6 @@ public class MemberController {
     @PostMapping("/signup")
     public String signUp(MemberDto member) {
         log.info(member.toString());
-
         Member member1 = memberService.createMember(member);
         return "index";
     }
@@ -51,5 +49,44 @@ public class MemberController {
     public String signUp(HttpSession session) {
         session.removeAttribute("member");
         return "index";
+    }
+
+    @PostMapping("/check_id")
+    public @ResponseBody boolean checkId(String userId) {
+        Member member = memberService.selectMemberById(userId);
+        return member != null;
+    }
+
+    @PostMapping("/check_nick")
+    public @ResponseBody boolean checkNick(String userNick) {
+        Member member = memberService.selectMemberByNick(userNick);
+        return member != null;
+    }
+
+    @PostMapping("/my_page")
+    public String myPage() {
+        return "mypage";
+    }
+
+    @GetMapping("/my_page_update")
+    public String updateMyPage() {
+        return "mypage_update";
+    }
+
+    @PostMapping("/get_password")
+    public @ResponseBody String getPassword(String userId) {
+        return memberService.selectMemberById(userId).getUserPassword();
+    }
+
+    @PostMapping("/change_password")
+    public String changePassword(Model model, String userId, String password) {
+        Member member = memberService.selectMemberById(userId);
+        member.setUserPassword(password);
+        if (memberService.updateMember(userId, member)) {
+            model.addAttribute("message", "비밀번호가 변경되었습니다.");
+            return "/index";
+        } else {
+            return "/";
+        }
     }
 }

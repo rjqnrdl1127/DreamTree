@@ -19,30 +19,30 @@
             <div class="form">
                 <h1>Create Account</h1>
                 <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.google.co.kr" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="https://www.facebook.com" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://github.com" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://kr.linkedin.com" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email for registration</span>
                 <div>
                     <div class="input">
                         <div>
-                            <input type="text" name="userId" placeholder="아이디">
+                            <input type="text" name="userId" id="user_id" placeholder="아이디">
                         </div>
                         <div>
-                            <button id="btn-check-id">확인</button>
+                            <button type="button" id="btn-check-id">확인</button>
                         </div>
                     </div>
-                    <input type="password" name="userPassword" placeholder="비밀번호">
-                    <input type="password" name="user_password2" placeholder="비밀번호 확인">
+                    <input type="password" id="user_password" name="userPassword" placeholder="비밀번호">
+                    <input type="password" id="user_password2" name="userPassword2" placeholder="비밀번호 확인">
                     <input type="text" name="userName" placeholder="이름">
                     <div class="input">
                         <div>
-                            <input type="text" name="userNick" placeholder="닉네임">
+                            <input type="text" name="userNick" id="user_nick" placeholder="닉네임">
                         </div>
                         <div>
-                            <button id="btn-check-nick">확인</button>
+                            <button type="button" id="btn-check-nick">확인</button>
                         </div>
                     </div>
                     <input type="text" name="userMobile" placeholder="전화번호">
@@ -56,14 +56,14 @@
             <div class="form">
                 <h1>Sign In</h1>
                 <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://github.com/rjqnrdl1127/DreamTree" class="icon"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.google.co.kr" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="https://www.facebook.com" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://github.com" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://kr.linkedin.com" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email password</span>
-                <input type="text" name="username" placeholder="아아디">
-                <input type="password" placeholder="비밀번호">
+                <input type="text" name="userId" placeholder="아아디">
+                <input type="password" name="userPassword" placeholder="비밀번호">
                 <a href="#">Forget Your Password?</a>
                 <button id="btn_sign_in">Sign In</button>
             </div>
